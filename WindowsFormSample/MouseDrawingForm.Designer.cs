@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormSample
 {
-    partial class MainForm
+    partial class MouseDrawingForm
     {
         /// <summary>
         /// Required designer variable.

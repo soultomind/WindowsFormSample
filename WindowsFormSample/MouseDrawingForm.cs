@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormSample
 {
-    public partial class MainForm : Form
+    public partial class MouseDrawingForm : Form
     {
         private Graphics _graphics;
 
@@ -20,7 +20,7 @@ namespace WindowsFormSample
         private Point _currentPoint = Point.Empty;
         
         private Pen _pen = new Pen(new SolidBrush(Color.LightSeaGreen), 5);
-        public MainForm()
+        public MouseDrawingForm()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace WindowsFormSample
                 int command = m.WParam.ToInt32() & 0xFFF0;
                 if (command == SYSCOMMAND.SC_MOVE)
                 {
-                    return;
+                    // return;
                 }
             }
             base.WndProc(ref m);
