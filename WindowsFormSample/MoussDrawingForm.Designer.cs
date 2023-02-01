@@ -1,7 +1,6 @@
-﻿
-namespace WindowsFormSample
+﻿namespace WindowsFormSample
 {
-    partial class MouseDrawingForm
+    partial class MoussDrawingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,17 +30,20 @@ namespace WindowsFormSample
         {
             this.SuspendLayout();
             // 
-            // MainForm
+            // MoussDrawingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MainForm";
-            this.Text = "MainForm";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainForm_Paint);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "MoussDrawingForm";
+            this.Text = "MoussDrawingForm";
+            this.Load += new System.EventHandler(this.MoussDrawingForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.MoussDrawingForm_Paint);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoussDrawingForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoussDrawingForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoussDrawingForm_MouseUp);
             this.ResumeLayout(false);
 
         }

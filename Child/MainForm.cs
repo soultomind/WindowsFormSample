@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,9 +32,10 @@ namespace Child
 
         protected override void WndProc(ref Message m)
         {
+            Debug.WriteLine("WndProc=" + m.Msg);
             if (m.Msg == AppMessage.WM_PARENT_MESSAGE)
             {
-                MessageBox.Show(this, "WM_PARENT_MESSAGE");
+                MessageBox.Show(this, "WM_PARENT_MESSAGE", "Parent 에서 온 윈도우 메시지");
                 return;
             }
             base.WndProc(ref m);

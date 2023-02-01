@@ -31,6 +31,8 @@ namespace Parent
         {
             this._ButtonChild = new System.Windows.Forms.Button();
             this._LabelExecuteState = new System.Windows.Forms.Label();
+            this._TextBoxHandle = new System.Windows.Forms.TextBox();
+            this._ButtonBnClicked = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _ButtonChild
@@ -53,11 +55,30 @@ namespace Parent
             this._LabelExecuteState.TabIndex = 2;
             this._LabelExecuteState.Text = "실행상태 : ";
             // 
+            // _TextBoxHandle
+            // 
+            this._TextBoxHandle.Location = new System.Drawing.Point(146, 61);
+            this._TextBoxHandle.Name = "_TextBoxHandle";
+            this._TextBoxHandle.Size = new System.Drawing.Size(100, 23);
+            this._TextBoxHandle.TabIndex = 2;
+            // 
+            // _ButtonBnClicked
+            // 
+            this._ButtonBnClicked.Location = new System.Drawing.Point(146, 90);
+            this._ButtonBnClicked.Name = "_ButtonBnClicked";
+            this._ButtonBnClicked.Size = new System.Drawing.Size(75, 23);
+            this._ButtonBnClicked.TabIndex = 3;
+            this._ButtonBnClicked.Text = "BN_Clicked";
+            this._ButtonBnClicked.UseVisualStyleBackColor = true;
+            this._ButtonBnClicked.Click += new System.EventHandler(this._ButtonBnClicked_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 161);
+            this.Controls.Add(this._ButtonBnClicked);
+            this.Controls.Add(this._TextBoxHandle);
             this.Controls.Add(this._LabelExecuteState);
             this.Controls.Add(this._ButtonChild);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F);
@@ -75,6 +96,8 @@ namespace Parent
 
         private System.Windows.Forms.Button _ButtonChild;
         private System.Windows.Forms.Label _LabelExecuteState;
+        private System.Windows.Forms.TextBox _TextBoxHandle;
+        private System.Windows.Forms.Button _ButtonBnClicked;
     }
 }
 
