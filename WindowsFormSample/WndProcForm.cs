@@ -23,6 +23,8 @@ namespace WindowsFormSample
             if (m.Msg == WindowMessage.WM_SYSCOMMAND)
             {
                 int command = m.WParam.ToInt32() & 0xFFF0;
+
+                // 1110 & 0010 결과 => 0010 자리수에따라 둘다 1인곳은 1이됨
                 if (_CheckBoxPreventFormMove.Checked)
                 {
                     if (command == SYSCOMMAND.SC_MOVE)
