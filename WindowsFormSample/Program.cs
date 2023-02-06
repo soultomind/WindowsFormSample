@@ -18,7 +18,7 @@ namespace WindowsFormSample
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Application.Run(new MoussDrawingForm());
+            Application.Run(new WndProcForm());
         }
     }
 }

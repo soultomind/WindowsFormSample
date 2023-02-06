@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ITabletExternal.cs" />
     <Compile Include="MoussDrawingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,8 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TabletInputDataEventArgs.cs" />
-    <Compile Include="TabletInputDataEventHandler.cs" />
     <Compile Include="WndProcForm.cs">
       <SubType>Form</SubType>
     </Compile>

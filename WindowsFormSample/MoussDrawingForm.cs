@@ -64,26 +64,10 @@ namespace WindowsFormSample
                 _graphics = CreateGraphics();
             }
 
-            Point[] points = CreatePoints();
-            if (points.Length > 0)
+            foreach (DrawLine drawLine in _drawLines)
             {
-                e.Graphics.DrawLines(_pen, points);
+                e.Graphics.DrawLine(_pen, drawLine.OldPoint, drawLine.CurrentPoint);
             }
-        }
-
-        private Point[] CreatePoints()
-        {
-            int count = _drawLines.Count * 2;
-            Point[] points = new Point[count];
-
-            int index = 0;
-            foreach (var item in _drawLines)
-            {
-                points[index++] = item.OldPoint;
-                points[index++] = item.CurrentPoint;
-            }
-
-            return points;
         }
     }
 
